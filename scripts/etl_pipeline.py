@@ -21,9 +21,9 @@ def clean_data(df):
     # Drop rows without Loan ID
     df = df.dropna(subset=['Loan ID'])
 
-    # Drop redundant column
+    # 1. Handling Months since last delinquent (Achieving 0 nulls)
     if 'Months since last delinquent' in df.columns:
-        df = df.drop('Months since last delinquent', axis=1)
+        df['Months since last delinquent'] = df['Months since last delinquent'].fillna(0)
 
     # Convert to numeric
     df['Current Loan Amount'] = pd.to_numeric(df['Current Loan Amount'], errors='coerce')
@@ -44,8 +44,17 @@ def clean_data(df):
     debt_upper_limit = df['Monthly Debt'].quantile(0.99)
     df['Monthly Debt'] = df['Monthly Debt'].clip(upper=debt_upper_limit)
 
-    # Fix credit score anomalies
+    # Fix credit score anomalies (> 850)
     df.loc[df['Credit Score'] > 850, 'Credit Score'] /= 10
+
+    # Standardize Home Ownership
+    df['Home Ownership'] = df['Home Ownership'].replace('HaveMortgage', 'Home Mortgage')
+
+    # Standardize Purpose
+    df['Purpose'] = df['Purpose'].str.lower()
+
+    # Convert Years in current job to numeric
+    df['Years in current job'] = df['Years in current job'].astype(str).str.extract('(\d+)').astype(float).fillna(0)
 
     return df
 
