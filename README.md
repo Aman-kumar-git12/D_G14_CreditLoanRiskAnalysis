@@ -188,12 +188,12 @@ This table must match evidence in GitHub Insights, PR history, and committed fil
 
 | Team Member | Dataset and Sourcing | ETL and Cleaning | EDA and Analysis | Statistical Analysis | Tableau Dashboard | Report Writing | PPT and Viva |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Aman Kumar | ✓ | ✓ | | | | ✓ | ✓ |
-| Kartik Yadav | | ✓ | ✓ | | | | ✓ |
-| Kumar Sanu | | | | ✓ | | ✓ | |
-| Prashant Pandey | | | | | ✓ | | ✓ |
-| Archit Gosain | ✓ | | | | ✓ | |  |
-| Anish Suman | | | ✓ | | | ✓ | |
+| Aman Kumar | | | ✓ | | ✓ | | ✓ |
+| Kartik Yadav | | | | | | ✓ | ✓ |
+| Prashant Pandey | ✓ | ✓ | | | | | |
+| Anish Suman | | | ✓ | ✓ | | | |
+| Kumar Sanu | | | ✓ | | ✓ | | |
+| Archit Gosain | | | | | | ✓ | ✓ |
 
 **Declaration:** We confirm that the above contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts.
 
