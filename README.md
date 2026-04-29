@@ -3,6 +3,11 @@
 A 2-week industry simulation capstone using Python, GitHub, and Tableau to convert raw data into actionable business intelligence.
 
 ---
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
+
 
 ## Project Overview
 
@@ -14,18 +19,18 @@ A 2-week industry simulation capstone using Python, GitHub, and Tableau to conve
 | **Section** | [To be filled by team] |
 | **Faculty Mentor** | [To be filled by team] |
 | **Institute** | Newton School of Technology |
-| **Submission Date** | [To be filled by team] |
+| **Submission Date** | [29 Apr 2026] |
 
 ## Team Members
 
 | Role | Name | GitHub Username |
 | :--- | :--- | :--- |
 | Project Lead | Aman Kumar | @Aman-kumar-git12 |
-| Data Lead | [Name] | [github-handle] |
-| ETL Lead | [Name] | [github-handle] |
-| Analysis Lead | [Name] | [github-handle] |
-| Visualization Lead | [Name] | [github-handle] |
-| Strategy Lead | [Name] | [github-handle] |
+| Data Lead | Kartik Yadav | [github-handle] |
+| ETL Lead | Prashant Pandey | [github-handle] |
+| Analysis Lead | Anish Suman | [github-handle] |
+| Visualization Lead | Kumar Sanu | [github-handle] |
+| PPT & Quality Lead | Archit Gosain | [github-handle] |
 
 *(Note: Replace placeholders with actual team member details)*
 
@@ -183,12 +188,12 @@ This table must match evidence in GitHub Insights, PR history, and committed fil
 
 | Team Member | Dataset and Sourcing | ETL and Cleaning | EDA and Analysis | Statistical Analysis | Tableau Dashboard | Report Writing | PPT and Viva |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Aman Kumar | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
-| Member 2 | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
-| Member 3 | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
-| Member 4 | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
-| Member 5 | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
-| Member 6 | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
+| Aman Kumar | ✓ | ✓ | | | | ✓ | |
+| Kartik Yadav | | ✓ | ✓ | | | | ✓ |
+| Kumar Sanu | | | | ✓ | | ✓ | |
+| Prashant Pandey | | | | | ✓ | | ✓ |
+| Archit Gosain | ✓ | | | | ✓ | | ✓ |
+| Anish Suman | | | ✓ | | | ✓ | |
 
 **Declaration:** We confirm that the above contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts.
 
