@@ -1,0 +1,1 @@
+dashboard_link = https://public.tableau.com/app/profile/aman.kumar7311/viz/bank_loan_risk/Dashboard1?publish=yes
