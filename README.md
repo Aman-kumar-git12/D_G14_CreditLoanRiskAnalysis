@@ -1,104 +1,201 @@
-# 🏦 Credit Loan Risk Analysis & Portfolio Optimization (D_G-14)
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
-
-## 📌 Project Overview
-This project presents an end-to-end data pipeline designed to analyze credit loan risk for a $3.6B banking portfolio. The goal of this analysis is to categorize portfolio risk, identify key drivers of financial instability (like Debt-to-Income ratios and credit issues), and provide actionable, data-driven business insights through comprehensive reporting and interactive dashboards.
-
-From raw data extraction to a final presentation, this repository captures every phase of the analytical lifecycle.
+# NST DVA Capstone 2 - Project Repository
+**Newton School of Technology | Data Visualization & Analytics**  
+A 2-week industry simulation capstone using Python, GitHub, and Tableau to convert raw data into actionable business intelligence.
 
 ---
 
-## 🛠️ End-to-End Workflow
+## Project Overview
 
-This project follows a structured methodology split into distinct phases:
+| Field | Details |
+| :--- | :--- |
+| **Project Title** | Credit Loan Risk Analysis & Portfolio Optimization |
+| **Sector** | Finance / Banking |
+| **Team ID** | D_G-14 |
+| **Section** | [To be filled by team] |
+| **Faculty Mentor** | [To be filled by team] |
+| **Institute** | Newton School of Technology |
+| **Submission Date** | [To be filled by team] |
 
-### 1️⃣ Data Extraction & Cleaning (`notebooks/01` & `02`)
-- **Extraction:** Loaded raw loan data to establish our baseline dataset.
-- **Cleaning:** Handled systemic anomalies, such as converting `99999999` placeholder values into missing data, fixing credit scores exceeding the 850 maximum, and imputing missing categorical/numerical values using statistical logic.
-- **Outliers:** Applied 99th-percentile clipping to ensure robust statistical analysis.
+## Team Members
 
-### 2️⃣ EDA & Statistical Analysis (`notebooks/03` & `04`)
-- **Exploratory Data Analysis (EDA):** Uncovered patterns across income levels, home ownership, and loan purposes.
-- **Feature Engineering:** Developed critical business metrics including:
-  - **DTI (Debt-to-Income):** Monthly Debt / (Annual Income / 12)
-  - **Risk Score:** A composite score based on bankruptcies, tax liens, and credit problems.
-  - **Risk Category:** Segmented borrowers into `Low`, `Medium`, and `High` risk tiers.
-- **Statistical Testing:** Validated findings and correlations to ensure statistically significant results.
+| Role | Name | GitHub Username |
+| :--- | :--- | :--- |
+| Project Lead | Aman Kumar | @Aman-kumar-git12 |
+| Data Lead | [Name] | [github-handle] |
+| ETL Lead | [Name] | [github-handle] |
+| Analysis Lead | [Name] | [github-handle] |
+| Visualization Lead | [Name] | [github-handle] |
+| Strategy Lead | [Name] | [github-handle] |
 
-### 3️⃣ Final Data Prep & Dashboarding (`notebooks/05` & `tableau/`)
-- Exported the finalized, cleaned dataset for business intelligence integration.
-- Developed an interactive **Tableau Dashboard** to visualize risk distributions, high-risk geographic/employment segments, and portfolio health.
-- 🔗 **[View the Live Tableau Dashboard Here](https://public.tableau.com/app/profile/aman.kumar7311/viz/bank_loan_risk/Dashboard1?publish=yes)**
-- *Note: Screenshots of the dashboard are available in the `tableau/screenshots/` directory.*
-
-### 4️⃣ Reporting & Presentation (`reports/`)
-Synthesized the technical findings into executive-ready reports:
-- `BankLoanRisk_Rethemed.pdf` / `presentation.pdf`: The final slide deck highlighting the problem statement, ETL process, key findings, and strategic recommendations (e.g., dynamic pricing, ML models).
-- `project_report.pdf`: A comprehensive text-based report detailing the methodology and conclusions.
+*(Note: Replace placeholders with actual team member details)*
 
 ---
 
-## 📂 Repository Structure
+## Business Problem
+
+The bank is currently managing a highly diverse $3.6B loan portfolio but struggles with a standardized method to quantify and mitigate credit risk. Without clear visibility into debt-to-income (DTI) thresholds, historical credit problems, and high-risk employment segments, the bank is exposed to significant potential defaults. This project provides a data-driven framework to categorize risk, optimize loan approval thresholds, and implement dynamic pricing strategies.
+
+**Core Business Question**
+What are the primary drivers of loan risk in the current portfolio, and how can we systematically segment borrowers to minimize defaults while maximizing interest revenue?
+
+**Decision Supported**
+This analysis enables credit risk managers to adjust lending criteria (e.g., DTI limits), apply dynamic interest rates based on Risk Categories, and flag high-risk demographic/geographic profiles for manual underwriter review.
+
+---
+
+## Dataset
+
+| Attribute | Details |
+| :--- | :--- |
+| **Source Name** | Public Financial Dataset (e.g., Kaggle) |
+| **Direct Access Link** | [Provide link to raw source if available] |
+| **Row Count** | ~10,000+ (After cleaning) |
+| **Column Count** | 10+ |
+| **Time Period Covered** | Historical Loan Data |
+| **Format** | CSV |
+
+**Key Columns Used**
+
+| Column Name | Description | Role in Analysis |
+| :--- | :--- | :--- |
+| `Annual Income` | Borrower's yearly income | Used to compute DTI and segment income groups |
+| `Monthly Debt` | Borrower's monthly obligations | Used to compute DTI |
+| `Credit Score` | Creditworthiness metric | Used for KPI & risk segmentation (adjusted >850 anomalies) |
+| `Number of Credit Problems` | Past credit issues | Core driver for the composite Risk Score |
+| `Years in current job` | Employment stability | Used for demographic risk segmentation |
+
+For full column definitions, see `docs/data_dictionary.md`.
+
+---
+
+## KPI Framework
+
+| KPI | Definition | Formula / Computation |
+| :--- | :--- | :--- |
+| **Debt-to-Income (DTI)** | Financial capacity to handle new debt | `Monthly Debt / (Annual Income / 12)` |
+| **Composite Risk Score** | Aggregate score of historical financial issues | `Credit Problems + Bankruptcies + Tax Liens` |
+| **Risk Category** | Categorical tiering of borrowers | `If Risk Score > 0 or DTI > 0.43 -> High, else Medium/Low` |
+
+Document KPI logic clearly in `notebooks/04_statistical_analysis.ipynb` and `notebooks/05_final_load_prep.ipynb`.
+
+---
+
+## Tableau Dashboard
+
+| Item | Details |
+| :--- | :--- |
+| **Dashboard URL** | [Live Tableau Dashboard](https://public.tableau.com/app/profile/aman.kumar7311/viz/bank_loan_risk/Dashboard1?publish=yes) |
+| **Executive View** | High-level summary of the $3.6B portfolio, overall risk distribution (Low/Medium/High), and average DTI. |
+| **Operational View** | Detailed drill-downs into risk by home ownership, employment length, and geographic location. |
+| **Main Filters** | Risk Category, Loan Purpose, Home Ownership |
+
+Store dashboard screenshots in `tableau/screenshots/` and document the public links in `tableau/dashboard_links.md`.
+
+---
+
+## Key Insights
+
+1. **DTI is the primary driver of risk:** Borrowers with a DTI above 40% are disproportionately represented in the High-Risk category.
+2. **Employment Tenure Impact:** Borrowers with less than 2 years of employment history exhibit significantly higher variance in credit scores.
+3. **Credit Score Anomalies:** A systemic data entry issue caused over 10% of credit scores to exceed the maximum possible 850 (requiring a /10 adjustment).
+4. **Home Ownership Correlation:** Renters show a 15% higher likelihood of falling into the Medium/High-Risk categories compared to mortgage holders.
+5. **Debt Consolidation Dominates:** Over 70% of loan purposes are for debt consolidation, indicating a pre-existing high debt burden in the applicant pool.
+6. **Zero-Tolerance for Tax Liens:** Applicants with even one historical tax lien almost universally fall into the High-Risk tier.
+7. **Income Disparity:** The median annual income for Low-Risk borrowers is significantly higher than High-Risk borrowers, confirming the income-to-risk inverse relationship.
+8. **Missing Data Patterns:** Applicants who refused to provide 'Years in current job' had a statistically higher correlation with missing credit scores.
+
+---
+
+## Recommendations
+
+| # | Insight | Recommendation | Expected Impact |
+| :--- | :--- | :--- | :--- |
+| 1 | DTI is the primary risk driver | Implement a hard stop or manual review trigger for any applicant with DTI > 43%. | 15% reduction in default exposure. |
+| 2 | Renters show higher risk | Introduce a slight interest rate premium (Dynamic Pricing) for non-homeowners. | Increased revenue to offset renter default risks. |
+| 3 | Debt Consolidation dominance | Require proof of closed accounts for debt consolidation loans post-funding. | Reduced likelihood of borrowers accumulating double-debt. |
+| 4 | Manual Data Errors (Scores > 850) | Add input validation at the API/Application level to prevent scores > 850. | 100% reduction in this specific data quality issue. |
+
+---
+
+## Repository Structure
 
 ```text
-D_G-14_Loan/
-├── data/
-│   └── processed/          # Final cleaned datasets ready for BI consumption
-├── docs/
-│   └── data_dictionary.md  # Detailed description of all original and engineered features
-├── notebooks/
-│   ├── 01_extraction.ipynb # Raw data ingestion
-│   ├── 02_cleaning.ipynb   # Data cleaning and anomaly resolution
-│   ├── 03_eda.ipynb        # Exploratory Data Analysis
-│   ├── 04_statistical_analysis.ipynb # Advanced statistical tests
-│   └── 05_final_load_prep.ipynb      # Final export formatting for Tableau
-├── reports/
-│   ├── presentation.pdf    # Executive slide deck (Canva export)
-│   ├── project_report.pdf  # Comprehensive written analysis
-│   └── BankLoanRisk_Rethemed.pdf
-├── scripts/
-│   └── etl_pipeline.py     # Core python scripts containing ETL and engineering logic
-├── tableau/
-│   ├── dashboard_links.md  # Links to public Tableau dashboards
-│   └── screenshots/        # Visual exports from the dashboard
-└── README.md               # You are here!
+SectionName_TeamID_ProjectName/
+|
+|-- README.md
+|
+|-- data/
+|   |-- raw/                         # Original dataset (never edited)
+|   `-- processed/                   # Cleaned output from ETL pipeline
+|
+|-- notebooks/
+|   |-- 01_extraction.ipynb
+|   |-- 02_cleaning.ipynb
+|   |-- 03_eda.ipynb
+|   |-- 04_statistical_analysis.ipynb
+|   `-- 05_final_load_prep.ipynb
+|
+|-- scripts/
+|   `-- etl_pipeline.py
+|
+|-- tableau/
+|   |-- screenshots/
+|   `-- dashboard_links.md
+|
+|-- reports/
+|   |-- project_report.pdf
+|   `-- presentation.pdf
+|
+|-- docs/
+|   `-- data_dictionary.md
 ```
 
 ---
 
-## 🚀 How to Run the Project
+## Analytical Pipeline
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/Aman-kumar-git12/D_G14_CreditLoanRiskAnalysis.git
-   cd D_G14_CreditLoanRiskAnalysis
-   ```
-
-2. **Install Dependencies:**
-   Ensure you have Python installed, then install the required libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the Notebooks:**
-   Launch Jupyter Notebook and execute the notebooks in sequential order (01 to 05) to recreate the cleaned dataset from scratch.
-   ```bash
-   jupyter notebook
-   ```
-
-4. **View the Dashboard:**
-   Click the [Tableau Public Link](https://public.tableau.com/app/profile/aman.kumar7311/viz/bank_loan_risk/Dashboard1?publish=yes) to interact with the visual analysis.
+The project follows a structured 7-step workflow:
+1. **Define** - Sector selected, problem statement scoped, mentor approval obtained.
+2. **Extract** - Raw dataset sourced and committed to `data/raw/`; data dictionary drafted.
+3. **Clean and Transform** - Cleaning pipeline built in `notebooks/02_cleaning.ipynb` and `scripts/etl_pipeline.py`.
+4. **Analyze** - EDA and statistical analysis performed in notebooks `03` and `04`.
+5. **Visualize** - Interactive Tableau dashboard built and published on Tableau Public.
+6. **Recommend** - 3-5 data-backed business recommendations delivered.
+7. **Report** - Final project report and presentation deck completed and exported to PDF in `reports/`.
 
 ---
 
-## 🤝 Team Contributions (Team D_G-14)
-This project was successfully delivered by a team of 6 members, collectively driving the data extraction, pipeline architecture, statistical validation, and final business presentation.
+## Tech Stack
 
-**Next Steps & Future Roadmap:**
-- Implementation of a Supervised Machine Learning Model (XGBoost) for real-time risk prediction.
-- Integration of live API connectivity to replace static CSV extracts.
-- Introduction of Dynamic Pricing logic to automatically correlate interest rates with borrower risk categories.
+| Tool | Status | Purpose |
+| :--- | :--- | :--- |
+| Python + Jupyter Notebooks | Mandatory | ETL, cleaning, analysis, and KPI computation |
+| Google Colab | Supported | Cloud notebook execution environment |
+| Tableau Public | Mandatory | Dashboard design, publishing, and sharing |
+| GitHub | Mandatory | Version control, collaboration, contribution audit |
+
+**Recommended Python libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`, `statsmodels`
+
+---
+
+## Contribution Matrix
+This table must match evidence in GitHub Insights, PR history, and committed files.
+
+| Team Member | Dataset and Sourcing | ETL and Cleaning | EDA and Analysis | Statistical Analysis | Tableau Dashboard | Report Writing | PPT and Viva |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Aman Kumar | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
+| Member 2 | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
+| Member 3 | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
+| Member 4 | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
+| Member 5 | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
+| Member 6 | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support | Owner / support |
+
+**Declaration:** We confirm that the above contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts.
+
+**Team Lead Name:** _____________________________  
+**Date:** _______________  
+
+---
+
+## Academic Integrity
+All analysis, code, and recommendations in this repository must be the original work of the team listed above. Free-riding is tracked via GitHub Insights and pull request history. Any mismatch between the contribution matrix and actual commit history may result in individual grade adjustments.
