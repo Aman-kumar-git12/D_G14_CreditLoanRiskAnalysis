@@ -26,7 +26,7 @@ A 2-week industry simulation capstone using Python, GitHub, and Tableau to conve
 | Role | Name | GitHub Username |
 | :--- | :--- | :--- |
 | Project Lead | Aman Kumar | @Aman-kumar-git12 |
-| Data Lead | Kartik Yadav | [github-handle] |
+| Data Lead | Kartik Yadav | @NineT8 |
 | ETL Lead | Prashant Pandey | [github-handle] |
 | Analysis Lead | Anish Suman | [github-handle] |
 | Visualization Lead | Kumar Sanu | [github-handle] |
@@ -189,7 +189,7 @@ This table must match evidence in GitHub Insights, PR history, and committed fil
 | Team Member | Dataset and Sourcing | ETL and Cleaning | EDA and Analysis | Statistical Analysis | Tableau Dashboard | Report Writing | PPT and Viva |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Aman Kumar | | | ✓ | | ✓ | | ✓ |
-| Kartik Yadav | | | | | | ✓ | ✓ |
+| Kartik Yadav | ✓ | | | | | ✓ | ✓ |
 | Prashant Pandey | ✓ | ✓ | | | | | |
 | Anish Suman | | | ✓ | ✓ | | | |
 | Kumar Sanu | | | ✓ | | ✓ | | |
