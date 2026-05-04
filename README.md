@@ -16,8 +16,8 @@ A 2-week industry simulation capstone using Python, GitHub, and Tableau to conve
 | **Project Title** | Credit Loan Risk Analysis & Portfolio Optimization |
 | **Sector** | Finance / Banking |
 | **Team ID** | D_G-14 |
-| **Section** | [To be filled by team] |
-| **Faculty Mentor** | [To be filled by team] |
+| **Section** | D |
+| **Faculty Mentor** | Archit |
 | **Institute** | Newton School of Technology |
 | **Submission Date** | [29 Apr 2026] |
 
