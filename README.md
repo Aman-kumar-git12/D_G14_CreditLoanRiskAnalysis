@@ -17,7 +17,7 @@ A 2-week industry simulation capstone using Python, GitHub, and Tableau to conve
 | **Sector** | Finance / Banking |
 | **Team ID** | D_G-14 |
 | **Section** | D |
-| **Faculty Mentor** | Archit |
+| **Faculty Mentor** | Archit Raj |
 | **Institute** | Newton School of Technology |
 | **Submission Date** | [29 Apr 2026] |
 
@@ -27,10 +27,10 @@ A 2-week industry simulation capstone using Python, GitHub, and Tableau to conve
 | :--- | :--- | :--- |
 | Project Lead | Aman Kumar | @Aman-kumar-git12 |
 | Data Lead | Kartik Yadav | @NineT8 |
-| ETL Lead | Prashant Pandey | [github-handle] |
-| Analysis Lead | Anish Suman | [github-handle] |
-| Visualization Lead | Kumar Sanu | [github-handle] |
-| PPT & Quality Lead | Archit Gosain | [github-handle] |
+| ETL Lead | Prashant Pandey | @notPrash |
+| Analysis Lead | Anish Suman | @Anish10-0022 |
+| Visualization Lead | Kumar Sanu | @ksanu1011 |
+| PPT & Quality Lead | Archit Gosain | ARCHIT-100069 |
 
 *(Note: Replace placeholders with actual team member details)*
 
